@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ApliArte">
+  <title>ApliArte</title>
+  <!-- Fondo cuadrado con esquinas redondeadas, azul corporativo ApliArte -->
+  <rect width="64" height="64" rx="12" fill="#005fa9"/>
+  <!-- Chevron principal (forma de A estilizada), blanco -->
+  <path d="M32 12 L52 38 L42 38 L32 25 L22 38 L12 38 Z" fill="#fdfdfd"/>
+  <!-- Trazo diagonal inferior izquierdo, cian acento -->
+  <path d="M16 44 L26 44 L20 52 L10 52 Z" fill="#5ecef5"/>
+  <!-- Trazo diagonal inferior derecho, cian acento -->
+  <path d="M48 44 L58 44 L48 56 L38 56 Z" fill="#5ecef5" opacity="0.85"/>
+</svg>
