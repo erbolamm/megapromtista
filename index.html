@@ -659,6 +659,318 @@
       color: var(--color-accent);
     }
 
+    /* Enlaces de Navegación Rápida */
+    .nav-links-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-link-btn {
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-main);
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .nav-link-btn:hover {
+      border-color: var(--color-accent);
+      color: var(--color-primary);
+      background: var(--bg-surface-elevated);
+    }
+
+    html[data-theme="dark"] .nav-link-btn:hover {
+      color: var(--color-accent);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links-group {
+        display: none;
+      }
+    }
+
+    /* Banner Superior Ecosistema / Noticias IA */
+    .banner-top-strip {
+      background: linear-gradient(90deg, #00467b 0%, #005fa9 50%, #00467b 100%);
+      color: #ffffff;
+      padding: 0.65rem 1.5rem;
+      border-bottom: 1px solid rgba(94, 206, 245, 0.3);
+      box-shadow: 0 4px 15px rgba(0, 95, 169, 0.15);
+    }
+
+    .banner-strip-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.88rem;
+    }
+
+    .banner-strip-pill {
+      background: rgba(94, 206, 245, 0.25);
+      border: 1px solid var(--color-accent);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .banner-strip-text {
+      flex: 1;
+      min-width: 280px;
+      color: #f1f5f9;
+    }
+
+    .banner-strip-text strong {
+      color: #ffffff;
+    }
+
+    .banner-strip-btn {
+      background: var(--color-accent);
+      color: #003660;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .banner-strip-btn:hover {
+      background: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    /* Tarjeta Destacada: Noticias IA ApliArte */
+    .ia-spotlight-card {
+      background: linear-gradient(135deg, rgba(0, 95, 169, 0.04) 0%, rgba(94, 206, 245, 0.09) 100%), var(--bg-surface);
+      border: 2px solid var(--color-accent);
+      border-radius: 16px;
+      padding: 2.25rem;
+      margin-bottom: 3.5rem;
+      box-shadow: 0 15px 35px -5px rgba(0, 95, 169, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    html[data-theme="dark"] .ia-spotlight-card {
+      background: linear-gradient(135deg, rgba(0, 70, 123, 0.25) 0%, rgba(94, 206, 245, 0.08) 100%), var(--bg-surface);
+      border-color: rgba(94, 206, 245, 0.4);
+    }
+
+    .ia-feed-mock {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .ia-feed-header {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.5rem;
+      letter-spacing: 0.5px;
+    }
+
+    html[data-theme="dark"] .ia-feed-header {
+      color: var(--color-accent);
+    }
+
+    .ia-feed-item {
+      text-decoration: none;
+      color: inherit;
+      padding: 0.5rem 0.65rem;
+      border-radius: 8px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      display: block;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .ia-feed-item:hover {
+      transform: translateX(3px);
+      border-color: var(--color-accent);
+    }
+
+    .ia-item-date {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      background: rgba(0, 95, 169, 0.1);
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      margin-bottom: 0.25rem;
+    }
+
+    html[data-theme="dark"] .ia-item-date {
+      color: var(--color-accent);
+      background: rgba(94, 206, 245, 0.12);
+    }
+
+    .ia-feed-item strong {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--text-main);
+      line-height: 1.35;
+    }
+
+    /* Banners de Comunidad, Apoyo & Patrocinio */
+    .banners-section {
+      margin-bottom: 4rem;
+    }
+
+    .support-banner-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+      color: #ffffff;
+      border-radius: 20px;
+      padding: 2.25rem 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.35);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .support-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: #38bdf8;
+      border-radius: 9999px;
+      padding: 0.25rem 0.85rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .support-title {
+      font-size: 1.95rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+    }
+
+    .support-quote {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      max-width: 720px;
+      margin: 0 auto 1.5rem auto;
+      line-height: 1.6;
+    }
+
+    .support-buttons-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-support {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .btn-support:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    .btn-support-kofi {
+      background: #ec4899;
+      color: #ffffff;
+    }
+
+    .btn-support-paypal {
+      background: #005fa9;
+      color: #ffffff;
+      border: 1px solid #5ecef5;
+    }
+
+    .btn-support-twitch {
+      background: #9333ea;
+      color: #ffffff;
+    }
+
+    .btn-support-gh {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+    }
+
+    /* Banner Leaderboard / Espacio Publicitario i-018 */
+    .banner-ad-box {
+      background: var(--bg-surface);
+      border: 2px dashed var(--color-accent);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+      box-shadow: var(--card-shadow);
+    }
+
+    .banner-ad-content h4 {
+      font-size: 1.25rem;
+      color: var(--color-primary);
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    html[data-theme="dark"] .banner-ad-content h4 {
+      color: var(--color-glow);
+    }
+
+    .banner-ad-content p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      line-height: 1.45;
+    }
+
+    .banner-ad-action {
+      white-space: nowrap;
+    }
+
     /* Footer */
     footer {
       border-top: 1px solid var(--border-color);
@@ -721,6 +1033,17 @@
     </a>
 
     <div class="nav-actions">
+      <nav class="nav-links-group">
+        <a href="https://ia.apliarte.com" target="_blank" rel="noopener" class="nav-link-btn">
+          📰 <span>Noticias IA</span>
+        </a>
+        <a href="https://erbolamm.github.io/FabricaDeAgentesApliarte/" target="_blank" rel="noopener" class="nav-link-btn">
+          🤖 <span>Fábrica</span>
+        </a>
+        <a href="#banners-apoyo" class="nav-link-btn">
+          💖 <span>Banners & Apoyo</span>
+        </a>
+      </nav>
       <div class="nav-badge" title="Ecosistema activo en directo">
         <span class="pulse-dot"></span>
         <span>ECOSISTEMA EN VIVO</span>
@@ -745,7 +1068,7 @@
       </p>
 
       <div class="hero-hud-controls">
-        <div class="hud-chip"><span>Nodos Activos:</span> <strong id="hud-node-count">13</strong></div>
+        <div class="hud-chip"><span>Nodos Activos:</span> <strong id="hud-node-count">14</strong></div>
         <div class="hud-chip"><span>Física:</span> <strong>Resortes Hooke + Damping</strong></div>
         <div class="hud-chip"><span>Fábrica Destacada:</span> <strong>+100 Agentes</strong></div>
       </div>
@@ -756,6 +1079,19 @@
       <span>Haz clic y arrastra cualquier nodo para interactuar con la gravedad elástica</span>
     </div>
   </section>
+
+  <!-- Banner de Cabecera Ecosistema / Noticias IA ApliArte -->
+  <div class="banner-top-strip">
+    <div class="banner-strip-inner">
+      <span class="banner-strip-pill">📰 PORTAL OFICIAL</span>
+      <span class="banner-strip-text">
+        <strong>Noticias IA ApliArte:</strong> Actualidad, análisis de modelos de razonamiento y guías de IA sin filtros por Javier Mateo: <strong>ia.apliarte.com</strong>
+      </span>
+      <a href="https://ia.apliarte.com" target="_blank" rel="noopener" class="banner-strip-btn">
+        Explorar ia.apliarte.com &rarr;
+      </a>
+    </div>
+  </div>
 
   <!-- Contenido Central -->
   <main class="main-wrapper">
@@ -805,6 +1141,57 @@
             </select>
           </div>
           <div id="prompt-display" class="prompt-terminal"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destacado: Portal de Noticias IA ApliArte -->
+    <section class="ia-spotlight-card" id="noticias-ia">
+      <span class="spotlight-badge" style="background: #005fa9; color: #fff;">📰 PORTAL DE ACTUALIDAD</span>
+      <div class="factory-grid">
+        <div class="factory-info">
+          <div class="section-eyebrow">DIVULGACIÓN & ANÁLISIS DE MODELOS</div>
+          <h3>Noticias IA ApliArte · <span style="font-size: 1.3rem; color: var(--color-accent);">ia.apliarte.com</span></h3>
+          <p>
+            El portal oficial de Javier Mateo dedicado al análisis práctico de la inteligencia artificial. Artículos sin rodeos sobre <strong>DeepSeek-R1, Claude 3.7 Sonnet, Google Gemini, modelos locales offline</strong> y arquitecturas de agentes autónomos.
+          </p>
+
+          <div class="tag-cloud">
+            <span class="tag-chip">🌐 Blog Oficial ApliArte</span>
+            <span class="tag-chip">🧠 Análisis Sin Filtros</span>
+            <span class="tag-chip">⚡ Novedades IA Diarias</span>
+            <span class="tag-chip">🛡️ Privacidad & Open Source</span>
+            <span class="tag-chip">📖 100% Libre</span>
+          </div>
+
+          <div class="action-btn-row">
+            <a href="https://ia.apliarte.com" target="_blank" rel="noopener" class="btn-primary">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              Entrar a ia.apliarte.com
+            </a>
+            <a href="https://apliarte.com" target="_blank" rel="noopener" class="btn-secondary">
+              🌐 Web Principal ApliArte
+            </a>
+          </div>
+        </div>
+
+        <div class="ia-feed-mock">
+          <div class="ia-feed-header">
+            <span class="pulse-dot"></span>
+            <span>PUBLICACIONES DESTACADAS EN IA.APLIARTE.COM</span>
+          </div>
+          <a href="https://ia.apliarte.com" target="_blank" rel="noopener" class="ia-feed-item">
+            <span class="ia-item-date">ACTUALIDAD</span>
+            <strong>Modelos de Razonamiento R1 y la era de la inferencia eficiente</strong>
+          </a>
+          <a href="https://ia.apliarte.com" target="_blank" rel="noopener" class="ia-feed-item">
+            <span class="ia-item-date">TUTORIAL</span>
+            <strong>De cero a servidor de IA local en Android con ClawMobil</strong>
+          </a>
+          <a href="https://ia.apliarte.com" target="_blank" rel="noopener" class="ia-feed-item">
+            <span class="ia-item-date">ANÁLISIS</span>
+            <strong>Por qué los prompts estructurados sustituyen a las interfaces tradicionales</strong>
+          </a>
         </div>
       </div>
     </section>
@@ -995,6 +1382,90 @@
       </div>
     </section>
 
+    <!-- Sección Banners Oficiales: Apoyo, Comunidad, Streaming y Patrocinio -->
+    <section class="banners-section" id="banners-apoyo">
+      <div class="section-header">
+        <div class="section-eyebrow">ECOSISTEMA APLIARTE & COMUNIDAD</div>
+        <h2 class="section-title">Banners Oficiales de Apoyo y Patrocinio</h2>
+        <p class="section-desc">
+          Espacio de patrocinio comunitario, canales de streaming en directo y banners publicitarios del ecosistema de software libre de Javier Mateo.
+        </p>
+      </div>
+
+      <!-- Banner 1: Banner Oficial de Apoyo y Comunidad (Ko-fi, PayPal, Twitch, GitHub Sponsors) -->
+      <div class="support-banner-card">
+        <div class="support-pill">
+          💖 SOFTWARE LIBRE & CÓDIGO ABIERTO
+        </div>
+        <h3 class="support-title">Apoya el Desarrollo de Software Libre de ApliArte</h3>
+        <p class="support-quote">
+          <em>"Hay empresas cobrando 2.000 € por formaciones y paquetes de prompts... aquí todo el software, agentes y herramientas son 100% abiertos y gratuitos. Si estas herramientas te ahorran tiempo o disfrutas las sesiones de código en vivo, un café ayuda a mantener los servidores y el desarrollo activo."</em>
+        </p>
+        <div class="support-buttons-row">
+          <a href="https://ko-fi.com/C0C11TWR1K" target="_blank" rel="noopener" class="btn-support btn-support-kofi">
+            ☕ Convidar un Café (Ko-fi)
+          </a>
+          <a href="https://paypal.me/erbolamm" target="_blank" rel="noopener" class="btn-support btn-support-paypal">
+            💳 Donar por PayPal
+          </a>
+          <a href="https://streamelements.com/apliarte/tip" target="_blank" rel="noopener" class="btn-support btn-support-twitch">
+            🟣 Tip en Directo (Twitch)
+          </a>
+          <a href="https://github.com/sponsors/erbolamm" target="_blank" rel="noopener" class="btn-support btn-support-gh">
+            🖤 GitHub Sponsors
+          </a>
+        </div>
+        <div style="font-size: 0.8rem; color: #94a3b8;">
+          100% voluntario · Creado con 🧠 por Javier Mateo (ErBolamm) · <a href="https://ia.apliarte.com" target="_blank" rel="noopener" style="color: #38bdf8; text-decoration: none;">ia.apliarte.com</a>
+        </div>
+      </div>
+
+      <!-- Banner 2: Canales de Streaming & Comunidad en Directo -->
+      <div class="support-banner-card" style="background: linear-gradient(135deg, #1e1b4b 0%, #00467b 100%);">
+        <div class="support-pill" style="color: #8fd5fa; border-color: rgba(143, 213, 250, 0.4); background: rgba(143, 213, 250, 0.15);">
+          📡 EMISIÓN EN DIRECTO & PROGRAMACIÓN PAR CON IA
+        </div>
+        <h3 class="support-title" style="font-size: 1.7rem;">Canales Oficiales de Streaming</h3>
+        <p class="support-quote">
+          Acompaña las sesiones de código en vivo, programación par con agentes autónomos y experimentos de arquitectura en tiempo real:
+        </p>
+        <div class="support-buttons-row">
+          <a href="https://www.twitch.tv/apliarte" target="_blank" rel="noopener" class="btn-support" style="background: #9333ea; color: #fff;">
+            🟣 Twitch (@apliarte)
+          </a>
+          <a href="https://www.youtube.com/@erbolammapliarte" target="_blank" rel="noopener" class="btn-support" style="background: #ef4444; color: #fff;">
+            ▶️ YouTube (@erbolammapliarte)
+          </a>
+          <a href="https://kick.com/apliarte" target="_blank" rel="noopener" class="btn-support" style="background: #22c55e; color: #000; font-weight: 800;">
+            🟩 Kick (@apliarte)
+          </a>
+          <a href="https://x.com/erbolamm" target="_blank" rel="noopener" class="btn-support" style="background: #0f172a; border: 1px solid #38bdf8; color: #fff;">
+            ✖️ X (@erbolamm)
+          </a>
+        </div>
+      </div>
+
+      <!-- Banner 3: Espacio Patrocinado / Banner Publicitario Propio (Idea i-018) -->
+      <div class="banner-ad-box">
+        <div class="banner-ad-content">
+          <h4>
+            <span style="font-size: 1.3rem;">📢</span>
+            Espacio de Banner Publicitario & Patrocinio ApliArte
+          </h4>
+          <p>
+            ¿Quieres dar visibilidad a tu producto, herramienta de software o startup ante una comunidad activa de desarrolladores, ingenieros de prompts y profesionales de la tecnología?
+            Banner responsive integrado en megapromtista.com, ia.apliarte.com y apps del ecosistema.
+          </p>
+        </div>
+        <div class="banner-ad-action">
+          <a href="https://apliarte.com" target="_blank" rel="noopener" class="btn-primary" style="padding: 0.6rem 1.15rem; font-size: 0.85rem;">
+            Consultar Patrocinio en apliarte.com &rarr;
+          </a>
+        </div>
+      </div>
+
+    </section>
+
   </main>
 
   <!-- Pie de Página -->
@@ -1101,6 +1572,7 @@
       { id: 'antigravity', label: 'Antigravity AI', x: width * 0.62, y: height * 0.15, vx: 0, vy: 0, radius: 14, color: '#5ecef5', targetUrl: '#skills-bridge' },
       { id: 'herdr', label: 'Herdr Orchestrator', x: width * 0.38, y: height * 0.15, vx: 0, vy: 0, radius: 14, color: '#005fa9', targetUrl: '#skills-bridge' },
       { id: 'zperiod', label: 'Zperiod (Trad. ES)', x: width * 0.85, y: height * 0.6, vx: 0, vy: 0, radius: 15, color: '#5ecef5', targetUrl: '#repos' },
+      { id: 'ia-apliarte', label: 'Noticias IA (ia.apliarte.com)', x: width * 0.22, y: height * 0.24, vx: 0, vy: 0, radius: 18, color: '#5ecef5', targetUrl: 'https://ia.apliarte.com' },
     ];
 
     // Resortes elásticos conectando el grafo
@@ -1121,6 +1593,8 @@
       { source: 2, target: 7, length: 110 },
       { source: 3, target: 6, length: 110 },
       { source: 7, target: 12, length: 100 },
+      { source: 0, target: 13, length: 130 },
+      { source: 1, target: 13, length: 110 },
     ];
 
     // Variables de Interacción
@@ -1161,7 +1635,7 @@
       }
     });
 
-    // Clic para saltar a la sección del nodo
+    // Clic para saltar a la sección del nodo o abrir enlace externo
     canvas.addEventListener('click', (e) => {
       const rect = canvas.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -1171,8 +1645,12 @@
         const dy = node.y - y;
         if (Math.sqrt(dx * dx + dy * dy) < node.radius + 6) {
           if (node.targetUrl) {
-            const targetEl = document.querySelector(node.targetUrl);
-            if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth' });
+            if (node.targetUrl.startsWith('http')) {
+              window.open(node.targetUrl, '_blank', 'noopener,noreferrer');
+            } else {
+              const targetEl = document.querySelector(node.targetUrl);
+              if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth' });
+            }
           }
           break;
         }
