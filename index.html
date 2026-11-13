@@ -575,6 +575,283 @@
       border: 1px solid #333;
     }
 
+    /* Estudio de Optimización de Prompts */
+    .prompt-studio-section {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2.25rem;
+      margin-bottom: 3.5rem;
+      box-shadow: var(--card-shadow);
+      position: relative;
+    }
+
+    .studio-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .studio-presets-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+      padding: 0.75rem 1rem;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+    }
+
+    .preset-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-right: 0.25rem;
+    }
+
+    .preset-chip {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.3rem 0.7rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.15s ease;
+    }
+
+    .preset-chip:hover, .preset-chip.active {
+      border-color: var(--color-accent);
+      background: rgba(94, 206, 245, 0.12);
+      color: var(--color-primary);
+    }
+
+    html[data-theme="dark"] .preset-chip:hover,
+    html[data-theme="dark"] .preset-chip.active {
+      color: var(--color-glow);
+    }
+
+    .studio-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.75rem;
+      align-items: stretch;
+    }
+
+    @media (max-width: 960px) {
+      .studio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .studio-pane {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .pane-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    html[data-theme="dark"] .pane-title {
+      color: var(--color-accent);
+    }
+
+    .config-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 520px) {
+      .config-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .input-field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .input-field-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .studio-select, .studio-textarea {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      border-radius: 8px;
+      padding: 0.6rem 0.8rem;
+      font-size: 0.88rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .studio-select:focus, .studio-textarea:focus {
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 3px rgba(94, 206, 245, 0.2);
+    }
+
+    .studio-textarea {
+      min-height: 140px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+
+    .toggles-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      background: var(--bg-surface-elevated);
+      padding: 0.85rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    .toggle-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      cursor: pointer;
+      color: var(--text-main);
+      user-select: none;
+    }
+
+    .toggle-item input[type="checkbox"] {
+      accent-color: var(--color-primary);
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+    }
+
+    .studio-actions-row {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .studio-output-box {
+      background: #181818;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      min-height: 380px;
+      box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .output-hud {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #2a2a2a;
+      padding-bottom: 0.75rem;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .hud-metrics-row {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    .hud-metric-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      background: #242424;
+      border: 1px solid #383838;
+      color: #94a3b8;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .hud-metric-pill strong {
+      color: #38bdf8;
+    }
+
+    .quality-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      background: rgba(16, 185, 129, 0.15);
+      color: #10b981;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .compiled-prompt-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      line-height: 1.55;
+      color: #e2e8f0;
+      white-space: pre-wrap;
+      overflow-y: auto;
+      flex: 1;
+      max-height: 320px;
+      padding-right: 0.5rem;
+    }
+
+    .output-footer {
+      border-top: 1px solid #2a2a2a;
+      padding-top: 0.85rem;
+      margin-top: 0.85rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .diff-drawer {
+      display: none;
+      background: #111;
+      border: 1px dashed #444;
+      border-radius: 8px;
+      padding: 0.85rem;
+      margin-top: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #cbd5e1;
+    }
+
+    .diff-drawer.visible {
+      display: block;
+    }
+
     /* Cuadrícula de Repositorios Libres */
     .repos-grid {
       display: grid;
@@ -1105,6 +1382,9 @@
 
     <div class="nav-actions">
       <nav class="nav-links-group">
+        <a href="#estudio-prompts" class="nav-link-btn">
+          ⚡ <span>Estudio Prompts</span>
+        </a>
         <a href="https://ia.apliarte.com" target="_blank" rel="noopener" class="nav-link-btn">
           📰 <span>Noticias IA</span>
         </a>
@@ -1216,7 +1496,142 @@
       </div>
     </section>
 
-    <!-- Destacado: Portal de Noticias IA ApliArte -->
+    <!-- Estudio de Optimización & Arquitectura de Prompts -->
+    <section class="prompt-studio-section" id="estudio-prompts">
+      <div class="studio-header">
+        <div>
+          <div class="section-eyebrow">LABORATORIO INTERACTIVO 100% CLIENTE</div>
+          <h2 class="section-title" style="font-size: 2rem;">Estudio & Optimizador de Prompts</h2>
+          <p class="section-desc">
+            Construye, refactoriza y optimiza instrucciones para modelos de razonamiento con arquitectura estructurada. Cero dependencias y cero telemetría externa.
+          </p>
+        </div>
+        <div class="hud-metric-pill" style="align-self: center;">
+          <span>Motor:</span> <strong>Determinista / Offline</strong>
+        </div>
+      </div>
+
+      <!-- Barra de Presets Rápidos (Solución a la barrera de articulación) -->
+      <div class="studio-presets-bar">
+        <span class="preset-label">Plantillas Rápidas:</span>
+        <button type="button" class="preset-chip active" data-preset="architect">🏛️ Arquitecto de Software</button>
+        <button type="button" class="preset-chip" data-preset="reviewer">🔍 Auditor de Código & Seguridad</button>
+        <button type="button" class="preset-chip" data-preset="b2b">📈 Estratega de Crecimiento B2B</button>
+        <button type="button" class="preset-chip" data-preset="socratic">🎓 Tutor Socrático</button>
+        <button type="button" class="preset-chip" data-preset="clean">✨ Lienzo Limpio</button>
+      </div>
+
+      <div class="studio-grid">
+        <!-- Panel Izquierdo: Configuración e Intención en Bruto -->
+        <div class="studio-pane">
+          <div class="pane-title">
+            <span>1. Parámetros de Arquitectura</span>
+            <span style="font-size: 0.72rem; color: var(--text-muted); font-weight: normal;">Configura tu agente</span>
+          </div>
+
+          <div class="config-row">
+            <div class="input-field-group">
+              <label for="studio-framework" class="input-field-label">Framework Estructural:</label>
+              <select id="studio-framework" class="studio-select">
+                <option value="apliarte">Canónico ApliArte (#ROL / #TAREA / #REGLAS)</option>
+                <option value="rtf">RTF (Role - Task - Format)</option>
+                <option value="class">C.L.A.S.S. (Category / Layout / Specs)</option>
+              </select>
+            </div>
+
+            <div class="input-field-group">
+              <label for="studio-target-model" class="input-field-label">Modelo Objetivo:</label>
+              <select id="studio-target-model" class="studio-select">
+                <option value="deepseek-r1">DeepSeek-R1 (Razonamiento CoT)</option>
+                <option value="claude-37">Claude 3.7 Sonnet (Precisión & Código)</option>
+                <option value="gpt-4o">OpenAI GPT-4o (Multimodal & Formato)</option>
+                <option value="gemini-flash">Gemini 2.5 Pro / Flash (Contexto Largo)</option>
+                <option value="local-llm">Modelos Locales / Ollama (Offline)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="input-field-group">
+            <label for="studio-user-input" class="input-field-label">Tu instrucción o idea base (borrador en bruto):</label>
+            <textarea id="studio-user-input" class="studio-textarea" placeholder="Ej: Necesito un prompt para auditar una web estática en accesibilidad y rendimiento sin usar librerías externas..."></textarea>
+          </div>
+
+          <!-- Conmutadores de Restricciones y Guardrails -->
+          <div class="toggles-group">
+            <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Guardrails & Restricciones:</div>
+            <label class="toggle-item">
+              <input type="checkbox" id="toggle-concise" checked>
+              <span><strong>Anti-paja:</strong> Eliminar preámbulos y cortesías vacías.</span>
+            </label>
+            <label class="toggle-item">
+              <input type="checkbox" id="toggle-reasoning" checked>
+              <span><strong>Razonamiento explícito:</strong> Forzar verificación técnica antes de emitir respuesta.</span>
+            </label>
+            <label class="toggle-item">
+              <input type="checkbox" id="toggle-anti-hallucination" checked>
+              <span><strong>Cero inventiva:</strong> Declarar explícitamente "si no lo sabes con certeza, di que no lo sabes".</span>
+            </label>
+            <label class="toggle-item">
+              <input type="checkbox" id="toggle-wcag">
+              <span><strong>Accesibilidad Estricta:</strong> Exigir contraste WCAG AAA y cero barreras TTS (cero emojis).</span>
+            </label>
+          </div>
+
+          <div class="studio-actions-row">
+            <button type="button" id="btn-compile-prompt" class="btn-primary" style="flex: 1; justify-content: center;">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              Optimizar Prompt (Ctrl+Enter)
+            </button>
+            <button type="button" id="btn-toggle-diff" class="btn-secondary" title="Comparar antes y después">
+              ⚖️ Comparativa
+            </button>
+            <button type="button" id="btn-reset-studio" class="btn-secondary" title="Restablecer">
+              ↺
+            </button>
+          </div>
+        </div>
+
+        <!-- Panel Derecho: Salida Compilada y HUD de Métricas -->
+        <div class="studio-pane">
+          <div class="pane-title">
+            <span>2. Prompt Compilado & Métricas HUD</span>
+            <span class="quality-badge" id="studio-quality-badge">Calidad: 95% Óptimo</span>
+          </div>
+
+          <div class="studio-output-box">
+            <div>
+              <div class="output-hud">
+                <div class="hud-metrics-row">
+                  <div class="hud-metric-pill">Caracteres: <strong id="hud-chars">0</strong></div>
+                  <div class="hud-metric-pill">Palabras: <strong id="hud-words">0</strong></div>
+                  <div class="hud-metric-pill">Tokens Est.: <strong id="hud-tokens">0</strong></div>
+                </div>
+                <div class="hud-metric-pill" style="color: #5ecef5;">
+                  <span id="hud-framework-tag">APLIARTE</span>
+                </div>
+              </div>
+
+              <div id="diff-drawer" class="diff-drawer">
+                <div style="font-weight: 700; margin-bottom: 0.35rem; color: #f59e0b;">Comparativa de Transformación:</div>
+                <div id="diff-content"></div>
+              </div>
+
+              <pre id="compiled-prompt-output" class="compiled-prompt-code" tabindex="0" aria-label="Prompt compilado"></pre>
+            </div>
+
+            <div class="output-footer">
+              <span style="font-size: 0.72rem; color: #64748b;">
+                Listo para pegar en Gemini Gems, Claude Projects o Cursor Rules.
+              </span>
+              <button type="button" id="btn-copy-prompt" class="btn-primary" style="padding: 0.45rem 1rem; font-size: 0.82rem;">
+                <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copiar Prompt
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="ia-spotlight-card" id="noticias-ia">
       <span class="spotlight-badge" style="background: #005fa9; color: #fff;">📰 PORTAL DE ACTUALIDAD</span>
       <div class="factory-grid">
@@ -1875,10 +2290,293 @@
         ctx.fillText(node.label, node.x, node.y + node.radius + 6);
       }
 
+      // 4. Dibujar Partículas Dinámicas de Flujo de Tokens
+      for (let i = tokenParticles.length - 1; i >= 0; i--) {
+        const p = tokenParticles[i];
+        p.update();
+        p.draw(ctx, isDark);
+        if (p.life <= 0) {
+          tokenParticles.splice(i, 1);
+        }
+      }
+
       requestAnimationFrame(render);
     }
 
+    // Partículas de Flujo de Tokens en Canvas
+    let tokenParticles = [];
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    class TokenFlowParticle {
+      constructor(x, y, targetX, targetY) {
+        this.x = x;
+        this.y = y;
+        this.targetX = targetX;
+        this.targetY = targetY;
+        const angle = Math.atan2(targetY - y, targetX - x) + (Math.random() - 0.5) * 0.9;
+        const speed = Math.random() * 3.0 + 1.8;
+        this.vx = Math.cos(angle) * speed;
+        this.vy = Math.sin(angle) * speed;
+        this.life = 1.0;
+        this.decay = Math.random() * 0.02 + 0.015;
+        this.size = Math.random() * 2.8 + 1.2;
+        this.color = Math.random() > 0.4 ? '#5ecef5' : '#8fd5fa';
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.life -= this.decay;
+      }
+
+      draw(context, isDark) {
+        context.save();
+        context.globalAlpha = Math.max(this.life, 0);
+        context.fillStyle = this.color;
+        context.shadowColor = this.color;
+        context.shadowBlur = 8;
+        context.beginPath();
+        context.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        context.fill();
+        context.restore();
+      }
+    }
+
+    function triggerTokenBurst(originX, originY, count = 20) {
+      if (prefersReducedMotion) return;
+      const coreNode = nodes[0];
+      const tx = coreNode ? coreNode.x : width * 0.5;
+      const ty = coreNode ? coreNode.y : height * 0.45;
+      for (let i = 0; i < count; i++) {
+        tokenParticles.push(new TokenFlowParticle(originX, originY, tx, ty));
+      }
+    }
+
     render();
+
+    // --- ESTUDIO & OPTIMIZADOR DE PROMPTS (100% Client-Side / Zero-AI) ---
+    const studioFramework = document.getElementById('studio-framework');
+    const studioTargetModel = document.getElementById('studio-target-model');
+    const studioUserInput = document.getElementById('studio-user-input');
+    const toggleConcise = document.getElementById('toggle-concise');
+    const toggleReasoning = document.getElementById('toggle-reasoning');
+    const toggleAntiHallucination = document.getElementById('toggle-anti-hallucination');
+    const toggleWcag = document.getElementById('toggle-wcag');
+    const btnCompilePrompt = document.getElementById('btn-compile-prompt');
+    const btnToggleDiff = document.getElementById('btn-toggle-diff');
+    const btnResetStudio = document.getElementById('btn-reset-studio');
+    const btnCopyPrompt = document.getElementById('btn-copy-prompt');
+    const compiledPromptOutput = document.getElementById('compiled-prompt-output');
+    const diffDrawer = document.getElementById('diff-drawer');
+    const diffContent = document.getElementById('diff-content');
+    const hudChars = document.getElementById('hud-chars');
+    const hudWords = document.getElementById('hud-words');
+    const hudTokens = document.getElementById('hud-tokens');
+    const hudFrameworkTag = document.getElementById('hud-framework-tag');
+    const studioQualityBadge = document.getElementById('studio-quality-badge');
+    const presetChips = document.querySelectorAll('.preset-chip');
+
+    const STUDIO_PRESETS = {
+      architect: {
+        framework: 'apliarte',
+        model: 'deepseek-r1',
+        concise: true,
+        reasoning: true,
+        antiHallucination: true,
+        wcag: false,
+        text: 'Diseña la arquitectura para un sistema web que requiere cero dependencias externas, renderizado Canvas 2D Retina y máxima accesibilidad WCAG AAA.'
+      },
+      reviewer: {
+        framework: 'apliarte',
+        model: 'claude-37',
+        concise: true,
+        reasoning: true,
+        antiHallucination: true,
+        wcag: true,
+        text: 'Audita un repositorio SPA sin bundlers para detectar brechas de inmutabilidad, accesibilidad en lectores de pantalla y consumo de memoria en bucles de render.'
+      },
+      b2b: {
+        framework: 'rtf',
+        model: 'gpt-4o',
+        concise: true,
+        reasoning: false,
+        antiHallucination: true,
+        wcag: false,
+        text: 'Escribe una propuesta técnica y económica dirigida a CTOs para sustituir bibliotecas redundantes por JavaScript nativo y CSS canónico.'
+      },
+      socratic: {
+        framework: 'apliarte',
+        model: 'gemini-flash',
+        concise: false,
+        reasoning: true,
+        antiHallucination: true,
+        wcag: false,
+        text: 'Explica paso a paso la ley de Hooke y la amortiguación (damping) aplicadas a grafos interactivos en HTML5 Canvas con preguntas guiadas para afianzar el aprendizaje.'
+      },
+      clean: {
+        framework: 'apliarte',
+        model: 'claude-37',
+        concise: true,
+        reasoning: true,
+        antiHallucination: true,
+        wcag: false,
+        text: ''
+      }
+    };
+
+    function loadPreset(key) {
+      const p = STUDIO_PRESETS[key];
+      if (!p) return;
+      studioFramework.value = p.framework;
+      studioTargetModel.value = p.model;
+      studioUserInput.value = p.text;
+      toggleConcise.checked = p.concise;
+      toggleReasoning.checked = p.reasoning;
+      toggleAntiHallucination.checked = p.antiHallucination;
+      toggleWcag.checked = p.wcag;
+      compileStudioPrompt();
+    }
+
+    presetChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        presetChips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        loadPreset(chip.getAttribute('data-preset'));
+      });
+    });
+
+    function compileStudioPrompt() {
+      const rawText = studioUserInput.value.trim();
+      const framework = studioFramework.value;
+      const model = studioTargetModel.value;
+
+      hudFrameworkTag.textContent = framework.toUpperCase();
+
+      let compiled = '';
+      let modelDirectives = '';
+
+      // Directivas específicas según motor
+      if (model === 'deepseek-r1') {
+        modelDirectives = 'Aplica inferencia paso a paso dentro de tus reflexiones antes de emitir la conclusión.';
+      } else if (model === 'claude-37') {
+        modelDirectives = 'Privilegia la precisión quirúrgica de código, modularidad y verificación de tipos.';
+      } else if (model === 'gpt-4o') {
+        modelDirectives = 'Estructura la información con markdown nítido y separación clara de conceptos.';
+      } else if (model === 'gemini-flash') {
+        modelDirectives = 'Aprovecha la síntesis de contexto amplio manteniendo respuestas atómicas.';
+      } else {
+        modelDirectives = 'Ejecuta localmente con bajo consumo de memoria y respuesta determinista.';
+      }
+
+      // Ensamblaje según Framework
+      if (framework === 'apliarte') {
+        compiled = `#ROL\nEres un especialista senior en ingeniería de software y arquitectura web de alto rendimiento. ${modelDirectives}\n\n`;
+        compiled += `#CONTEXTO\nEl usuario necesita resolver con rigor técnico la siguiente necesidad:\n"${rawText || '[Instrucción pendiente de definir]'}"\n\n`;
+        compiled += `#METODOLOGÍA & PASOS\n1. Analiza el problema descomponiéndolo en invariantes fundamentales.\n2. Evalúa alternativas y fundamenta la solución óptima antes de codificar o concluir.\n3. Presenta la solución de forma modular y verificable.\n\n`;
+        compiled += `#REGLAS DE ORO\n`;
+        if (toggleConcise.checked) compiled += `- CERO PAJA: Prohibidos preámbulos, disculpas, obviedades o relleno corporativo. Ve directo al grano técnico.\n`;
+        if (toggleReasoning.checked) compiled += `- RAZONAMIENTO EXPLÍCITO: Si algo es técnicamente inviable o subóptimo, explica el PORQUÉ técnico con pruebas.\n`;
+        if (toggleAntiHallucination.checked) compiled += `- CERO ALUCINACIONES: Si desconoces un dato o contrato, decláralo explícitamente sin inventar.\n`;
+        if (toggleWcag.checked) compiled += `- ACCESIBILIDAD PURA: Sin emojis (protección para lectores TTS), contraste WCAG AAA y etiquetas semánticas estrictas.\n`;
+        compiled += `- MODULARIDAD: Código y directivas desacopladas, comprobables y sin dependencias no justificadas.`;
+
+      } else if (framework === 'rtf') {
+        compiled = `### ROLE\nAct as a Senior Systems Architect and Prompt Engineer with 15+ years experience. ${modelDirectives}\n\n`;
+        compiled += `### TASK\nExecute the following assignment with absolute precision:\n"${rawText || '[Insert primary task here]'}"\n\n`;
+        compiled += `### FORMAT & CONSTRAINTS\n`;
+        if (toggleConcise.checked) compiled += `- Brevity: Be extremely concise, direct and objective. Eliminate conversational filler.\n`;
+        if (toggleReasoning.checked) compiled += `- Chain-of-Thought: State technical trade-offs before providing final artifacts.\n`;
+        if (toggleAntiHallucination.checked) compiled += `- Strict Factual Grounding: Reject assumptions. If uncertain, state limits clearly.\n`;
+        if (toggleWcag.checked) compiled += `- Plain Text Integrity: Zero emojis, accessible formatting for screen readers.\n`;
+        compiled += `- Output structure: Clear Markdown headers with actionable steps.`;
+
+      } else if (framework === 'class') {
+        compiled = `## 1. CATEGORY & AUDIENCE\nDominio: Arquitectura Web & Prompts Autónomos. Audiencia: Desarrolladores e ingenieros de software exigentes.\n\n`;
+        compiled += `## 2. LAYOUT & STRUCTURE\nEstructura jerárquica con encabezados semánticos, bloques de código autocontenidos y listas numeradas para secuencias lógicas.\n\n`;
+        compiled += `## 3. AESTHETICS & SPECIFICITY\nInstrucción base: "${rawText || '[Instrucción pendiente]'}"\n${modelDirectives}\n\n`;
+        compiled += `## 4. SCHEME & CONSTRAINTS\n`;
+        if (toggleConcise.checked) compiled += `* Máxima densidad de información por palabra.\n`;
+        if (toggleReasoning.checked) compiled += `* Verificación previa de cada afirmación técnica.\n`;
+        if (toggleAntiHallucination.checked) compiled += `* Tolerancia cero con suposiciones no verificadas.\n`;
+        if (toggleWcag.checked) compiled += `* Accesibilidad universal sin caracteres decorativos.\n`;
+        compiled += `* Cero dependencias innecesarias.`;
+      }
+
+      compiledPromptOutput.textContent = compiled;
+
+      // Calcular Métricas HUD
+      const chars = compiled.length;
+      const words = compiled.trim().split(/\s+/).filter(Boolean).length;
+      const estTokens = Math.ceil(chars / 3.8);
+
+      hudChars.textContent = chars;
+      hudWords.textContent = words;
+      hudTokens.textContent = estTokens;
+
+      // Calcular Score de Calidad
+      let score = 50;
+      if (rawText.length > 25) score += 20;
+      if (toggleConcise.checked) score += 10;
+      if (toggleReasoning.checked) score += 10;
+      if (toggleAntiHallucination.checked) score += 10;
+      score = Math.min(score, 100);
+
+      studioQualityBadge.textContent = `Calidad: ${score}% ${score >= 90 ? 'Óptimo' : 'Mejorable'}`;
+      if (score >= 90) {
+        studioQualityBadge.style.background = 'rgba(16, 185, 129, 0.15)';
+        studioQualityBadge.style.color = '#10b981';
+      } else {
+        studioQualityBadge.style.background = 'rgba(245, 158, 11, 0.15)';
+        studioQualityBadge.style.color = '#f59e0b';
+      }
+
+      // Actualizar Diff
+      diffContent.innerHTML = `
+        <div style="margin-bottom: 0.35rem;"><span style="color: #ef4444;">- Borrador original:</span> "${rawText || '(vacío)'}" (${rawText.length} caracteres)</div>
+        <div><span style="color: #10b981;">+ Compilado optimizado:</span> Inyectado rol (${framework}), ${modelDirectives ? 'directiva de modelo, ' : ''}guardrails activos y estructura canónica (+${chars - rawText.length} caracteres estructurados).</div>
+      `;
+
+      // Pulso visual en el Canvas
+      triggerTokenBurst(width * 0.5, height * 0.45, 18);
+    }
+
+    btnCompilePrompt.addEventListener('click', compileStudioPrompt);
+    studioFramework.addEventListener('change', compileStudioPrompt);
+    studioTargetModel.addEventListener('change', compileStudioPrompt);
+    toggleConcise.addEventListener('change', compileStudioPrompt);
+    toggleReasoning.addEventListener('change', compileStudioPrompt);
+    toggleAntiHallucination.addEventListener('change', compileStudioPrompt);
+    toggleWcag.addEventListener('change', compileStudioPrompt);
+
+    studioUserInput.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+        e.preventDefault();
+        compileStudioPrompt();
+      }
+    });
+
+    btnToggleDiff.addEventListener('click', () => {
+      diffDrawer.classList.toggle('visible');
+    });
+
+    btnResetStudio.addEventListener('click', () => {
+      studioUserInput.value = '';
+      compileStudioPrompt();
+    });
+
+    btnCopyPrompt.addEventListener('click', () => {
+      const text = compiledPromptOutput.textContent;
+      if (!text) return;
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('toast');
+        toast.innerHTML = '<span>✓ Prompt optimizado copiado al portapapeles</span>';
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2400);
+      });
+    });
+
+    // Iniciar con preset arquitecto
+    loadPreset('architect');
   </script>
 </body>
 </html>
